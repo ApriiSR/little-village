@@ -821,6 +821,7 @@ LG.llm = (function () {
          long a villager's sentences are is their character's business; whether
          they are sentences is not. */
       'Say it the way a real ' + o.langName + ' speaker would actually say it out loud.',
+      o.grammarNote ? 'In ' + o.langName + ', ' + o.grammarNote : null,
       o.furigana ? 'Put the furigana in "say".\n' + LG.FURIGANA : null,
       o.diacritics ? 'Write "say" fully vocalised, tashkeel and all.\n' + LG.TASHKEEL : null,
       '',

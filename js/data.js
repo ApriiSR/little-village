@@ -104,7 +104,21 @@ LG.LANGUAGES = {
     // diacritics, no furigana. There is nothing here to annotate.
     name: 'toki pona', native: 'toki pona', flag: '\u{F0001}',
     tag: 'tok', romanTag: 'tok',
-    romanize: false, fontStack: "system-ui, sans-serif"
+    romanize: false, fontStack: "system-ui, sans-serif",
+    // DESIGN.md says not to name a failure mode in a prompt, on the theory
+    // that the salient word wins — and three positively-framed tries at this
+    // (the rule alone, the rule plus a correct/wrong pair, a juxtaposition
+    // that never says "error") all came back inside the baseline's own
+    // run-to-run spread. Only naming the mistake moved anything, so this is
+    // the one deliberate exception, kept because it was measured rather than
+    // reasoned about: across 298 replayed chatter prompts, pi-errors went
+    // 30/39 then 12/17 across two baseline runs to two after this line, and
+    // the error rate per pi actually used halved too, so villagers weren't
+    // just dodging the construction. Best guess why the rule holds anyway:
+    // the failure modes DESIGN.md warns about are stylistic, something the
+    // model can choose to perform more of — pi's arity is syntactic, and
+    // there's no way to "lean into" needing two or more words.
+    grammarNote: 'never use pi with a single word. pi must always be followed by two or more words.'
   }
 };
 

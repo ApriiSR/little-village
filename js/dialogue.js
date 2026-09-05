@@ -226,7 +226,6 @@ LG.dialogue = (function () {
        somebody else's benefit rather than the name to say. One line, positive,
        and only where there are two names to choose between. */
     if (s.lang !== 'en') lines.push('Anything listed with a name in quotation marks is called that here, and that is the name to say.');
-    if (L.grammarNote) lines.push('In ' + L.name + ', ' + L.grammarNote);
     lines.push('Stay in character.');
     lines.push('A sentence or two at a time.');
     // What they have to sell, when they are standing where they work
